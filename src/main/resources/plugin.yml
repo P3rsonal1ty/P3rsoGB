@@ -1,0 +1,4 @@
+name: P3rsoGB
+version: '${project.version}'
+main: org.p3rsonal1ty.p3rsogb.P3rsoGB
+api-version: '1.20'

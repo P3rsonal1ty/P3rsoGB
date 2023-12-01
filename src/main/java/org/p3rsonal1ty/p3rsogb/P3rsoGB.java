@@ -46,6 +46,11 @@ public final class P3rsoGB extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        if (!setupEconomy() ) {
+            getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
         System.out.println("┏━━━┳━━━┓       ┏━━━┳━━┓");
         System.out.println("┃┏━┓┃┏━┓┃       ┃┏━┓┃┏┓┃");
         System.out.println("┃┗━┛┣┛┏┛┣━┳━━┳━━┫┃ ┗┫┗┛┗┓");
@@ -68,6 +73,7 @@ public final class P3rsoGB extends JavaPlugin {
             BlockVector3 max = BlockVector3.at(GoldBlockx+5,GoldBlocky+5,GoldBlockz+5);
             ProtectedRegion region = new ProtectedCuboidRegion("GoldBlock",min,max);
             RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
+            assert world != null;
             RegionManager regions = container.get(BukkitAdapter.adapt(world));
             regions.addRegion(region);
             new ItemsToGoldBlock().Inv();

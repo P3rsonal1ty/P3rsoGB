@@ -22,6 +22,7 @@ public class PlayersNearGoldBlock {
             tempname = tempname.replace("CraftPlayer{name=","");
             tempname = tempname.replace("}","");
             Player player = Bukkit.getPlayer(tempname);
+            assert player != null;
             x=player.getX();
             y=player.getY();
             z=player.getZ();

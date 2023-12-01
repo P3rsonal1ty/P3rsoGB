@@ -41,17 +41,7 @@ public class LocationGoldBlock {
         Location loca = new Location(world,x,b.getY(),z);
         Block b1 = loca.getBlock();
         int r = b.getY();
-        if (b1.getType() !=Material.WATER) {
-            r = b.getY()+1;
-        }
-        else{
-            while(b1.getType()==Material.WATER){
-                r=b1.getY()-1;
-                Location location = new Location(world,x,r,z);
-                b1 = location.getBlock();
-            }
-            r=b1.getY()+1;
-        }
+        r=b1.getY()+1;
         return r;
     }
 }

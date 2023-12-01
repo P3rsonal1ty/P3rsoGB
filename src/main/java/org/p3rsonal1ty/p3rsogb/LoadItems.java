@@ -3,6 +3,8 @@ package org.p3rsonal1ty.p3rsogb;
 import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 
 public class LoadItems {
     private final JavaPlugin plugin;
@@ -18,7 +20,7 @@ public class LoadItems {
         String sMax = "Items.item"+k+".Max";
         String sChance = "Items.item"+k+".Chance";
         while(plugin.getConfig().getString(sType)!=null){
-            Material s = Material.getMaterial(plugin.getConfig().getString(sType));
+            Material s = Material.getMaterial(Objects.requireNonNull(plugin.getConfig().getString(sType)));
             P3rsoGB.ItemsType.add(s);
             P3rsoGB.ItemsMin.add(plugin.getConfig().getInt(sMin));
             P3rsoGB.ItemsMax.add(plugin.getConfig().getInt(sMax));

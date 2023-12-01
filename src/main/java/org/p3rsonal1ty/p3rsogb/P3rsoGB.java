@@ -57,6 +57,8 @@ public final class P3rsoGB extends JavaPlugin {
         System.out.println("┃┏━━╋┓┗┓┃┏┫━━┫┏┓┃┃ ┏┫┏━┓┃");
         System.out.println("┃┃  ┃┗━┛┃┃┣━━┃┗┛┃┗━┛┃┗━┛┃");
         System.out.println("┗┛  ┗━━━┻┛┗━━┻━━┻━━━┻━━━┛");
+        this.saveDefaultConfig();
+        this.getConfig();
         getServer().getPluginManager().registerEvents(new Events(), this);
         new LoadItems(this).LoadItem();
         new ChanceCalculate().Chance();

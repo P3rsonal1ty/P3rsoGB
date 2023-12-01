@@ -38,10 +38,14 @@ public class LocationGoldBlock {
     }
     public static int cordy(int x,int z,World world){
         Block b = world.getHighestBlockAt(x,z);
-        Location loca = new Location(world,x,b.getY(),z);
-        Block b1 = loca.getBlock();
         int r = b.getY();
-        r=b1.getY()+1;
+        if(b.getType()==Material.WATER){
+            while (b.getType()==Material.WATER){
+                r--;
+                b = world.getBlockAt(x,r,z);
+            }
+        }
+        r=b.getY()+1;
         return r;
     }
 }

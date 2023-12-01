@@ -1,1 +1,8 @@
 org\p3rsonal1ty\p3rsogb\P3rsoGB.class
+org\p3rsonal1ty\p3rsogb\LoadItems.class
+org\p3rsonal1ty\p3rsogb\math\ItemsToGoldBlock.class
+org\p3rsonal1ty\p3rsogb\math\NearPlayerToMoney.class
+org\p3rsonal1ty\p3rsogb\math\ChanceCalculate.class
+org\p3rsonal1ty\p3rsogb\handler\Events.class
+org\p3rsonal1ty\p3rsogb\math\LocationGoldBlock.class
+org\p3rsonal1ty\p3rsogb\math\PlayersNearGoldBlock.class

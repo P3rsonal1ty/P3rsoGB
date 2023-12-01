@@ -1,0 +1,41 @@
+Items:
+  item0:
+    Type: DIAMOND
+    Min: 9
+    Max: 14
+    Chance: 9
+  item1:
+    Type: IRON_INGOT
+    Min: 8
+    Max: 16
+    Chance: 20
+  item2:
+    Type: GOLD_INGOT
+    Min: 8
+    Max: 20
+    Chance: 66
+  item3:
+    Type: NETHERITE_INGOT
+    Min: 1
+    Max: 3
+    Chance: 1
+  item4:
+    Type: DIAMOND_HELMET
+    Min: 1
+    Max: 1
+    Chance: 1
+  item5:
+    Type: DIAMOND_CHESTPLATE
+    Min: 1
+    Max: 1
+    Chance: 1
+  item6:
+    Type: DIAMOND_LEGGINGS
+    Min: 1
+    Max: 1
+    Chance: 1
+  item7:
+    Type: DIAMOND_BOOTS
+    Min: 1
+    Max: 1
+    Chance: 1
